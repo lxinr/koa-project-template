@@ -1,4 +1,4 @@
-import { Context } from 'koa';
+import { Context } from 'koa'
 
 export function logger() {
   return async (ctx: Context, next: () => Promise<void>) => {
