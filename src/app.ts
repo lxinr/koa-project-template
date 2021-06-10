@@ -5,6 +5,7 @@ import config from '../config'
 
 import router from './routes'
 import { logger } from './middlewares/logger'
+import chalk from 'chalk'
 
 (async () => {
   // 初始化 Koa 应用实例
@@ -16,5 +17,6 @@ import { logger } from './middlewares/logger'
   app.use(router())
 
   await new Promise((resolve: any) => app.listen({ port: config.PORT }, resolve))
-  console.info(`🚀 Server ready at http://localhost:${config.PORT}`)
+  // console.info(`🚀 Server ready at http://localhost:${config.PORT}`)
+  console.log(chalk.blueBright('🚀 Server ready at'), chalk.greenBright(` http://localhost:${config.PORT}`))
 })()
