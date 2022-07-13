@@ -8,4 +8,4 @@
 #### TODO
 
 - [x] 使用chalk优化log信息
-- [] 补充log方法
+- [ ] 补充log方法
